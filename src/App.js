@@ -14,6 +14,7 @@ export default function App() {
 
       setIsLoading(true);
 
+      //fetch data
       const response = await fetch(url);
       const data = await response.json();
 
