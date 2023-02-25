@@ -63,7 +63,11 @@ export default function App() {
 
       const countryName = country.name.common.toLowerCase();
 
+      return countryName.startsWith(value);
+
     })
+
+    setFilterCounries(newCountries);
 
   }
 
