@@ -6,7 +6,6 @@ const Search = (props) => {
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
-
   }
   useEffect(()=>{
 
