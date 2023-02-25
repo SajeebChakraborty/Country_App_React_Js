@@ -13,9 +13,9 @@ const Search = () => {
 
   useEffect(()=>{
 
-    
 
-  })
+
+  },[searchText])
 
   return (
     <div style={{ textAlign:"center" }}>

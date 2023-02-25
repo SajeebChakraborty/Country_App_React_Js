@@ -56,11 +56,17 @@ export default function App() {
 
   }
 
+  const handleSearch = (searchValue)=>{
+
+    
+
+  }
+
   return (
     <div>
 
       <h1>Country App</h1>
-      <Search/>
+      <Search onSearch={handleSearch}/>
       { isLoading && <h1>Loading...</h1> }
       { error && <h1>{ error.message }</h1> }
       { countries && <Countries countries={filterCountries} onRemoveCountry={handleRemoveCountry}/> }
