@@ -2,6 +2,12 @@ import React from 'react'
 
 import style from './country.module.css';
 
+const handleRemoveCountry = (name)=>{
+
+    alert(name);
+
+}
+
 const Country = (props) => {
 
   const {country} = props;
