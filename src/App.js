@@ -3,6 +3,7 @@ import React,{useState, useEffect} from 'react'
 import Countries from './components/Countries';
 
 import "./App.css";
+import Country from './components/Country';
 
 const url="https://restcountries.com/v3.1/all";
 
@@ -11,6 +12,7 @@ export default function App() {
   const [isLoading,setIsLoading]=useState(true);
   const[error,setError]=useState(null);
   const[countries,setCountries]=useState([]);
+  const[filterCountries,setFilterCounries]=useState(countries);
 
   const fetchData = async(url)=>{
 
@@ -23,6 +25,7 @@ export default function App() {
       const data = await response.json();
 
       setCountries(data);
+      setFilterCounries(data);
       setIsLoading(false);
       setError(false);
 
@@ -45,7 +48,10 @@ export default function App() {
 
   const handleRemoveCountry = (name)=> {
 
-    alert(name);
+    const filter = filterCountries.filter((country)=>
+
+        country.name.common != name);
+        setFilterCounries(filter);
 
   }
 
@@ -56,7 +62,7 @@ export default function App() {
       
       { isLoading && <h1>Loading...</h1> }
       { error && <h1>{ error.message }</h1> }
-      { countries && <Countries countries={countries} onRemoveCountry={handleRemoveCountry}/> }
+      { countries && <Countries countries={filterCountries} onRemoveCountry={handleRemoveCountry}/> }
 
     </div>
   )
