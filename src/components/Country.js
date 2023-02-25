@@ -36,8 +36,7 @@ const Country = (props) => {
                 Remove Country
 
             </button>
-        </div>
-      
+        </div>    
     </article>
 
   )
