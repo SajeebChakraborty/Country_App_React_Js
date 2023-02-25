@@ -61,7 +61,7 @@ export default function App() {
     let value=searchValue.toLowerCase();
     const newCountries = countries.filter((country)=> {
 
-      const countryName = country.name.common;
+      const countryName = country.name.common.toLowerCase();
 
     })
 
