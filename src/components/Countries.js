@@ -7,6 +7,7 @@ import style from './countries.module.css';
 
 const Countries = (props) => {
   return (
+    
     <section className={style.countries}>
 
         {props.countries.map((country)=>{
