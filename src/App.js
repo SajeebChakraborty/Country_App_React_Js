@@ -43,6 +43,12 @@ export default function App() {
 
   },[])
 
+  const handleRemoveCountry = (name)=> {
+
+    alert(name);
+
+  }
+
   return (
     <div>
 
@@ -50,7 +56,7 @@ export default function App() {
       
       { isLoading && <h1>Loading...</h1> }
       { error && <h1>{ error.message }</h1> }
-      { countries && <Countries countries={countries}/> }
+      { countries && <Countries countries={countries} onRemoveCountry={handleRemoveCountry}/> }
 
     </div>
   )
