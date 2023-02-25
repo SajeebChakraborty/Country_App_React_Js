@@ -16,12 +16,13 @@ const Search = (props) => {
   },[searchText])
 
   return (
-    
+
     <div style={{ textAlign:"center" }}>
       
         <input type="text" placeholder='Search Conutry' value={searchText} onChange={handleChange}/>
 
     </div>
+    
   )
 }
 
