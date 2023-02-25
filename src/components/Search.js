@@ -9,7 +9,6 @@ const Search = (props) => {
     setSearchText(e.target.value);
 
   }
-
   useEffect(()=>{
 
     props.onSearch(searchText);
