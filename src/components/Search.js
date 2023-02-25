@@ -22,8 +22,7 @@ const Search = (props) => {
         <input type="text" placeholder='Search Conutry' value={searchText} onChange={handleChange}/>
 
     </div>
-    
+
   )
 }
-
 export default Search
