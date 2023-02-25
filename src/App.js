@@ -2,6 +2,8 @@ import React,{useState, useEffect} from 'react'
 
 import Countries from './components/Countries';
 
+import "./App.css";
+
 const url="https://restcountries.com/v3.1/all";
 
 export default function App() {
