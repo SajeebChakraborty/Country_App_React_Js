@@ -1,5 +1,7 @@
 import React,{useState, useEffect} from 'react'
 
+import Countries from './components/Countries';
+
 const url="https://restcountries.com/v3.1/all";
 
 export default function App() {
@@ -22,8 +24,6 @@ export default function App() {
       setIsLoading(false);
       setError(false);
 
-      console.log(countries);
-
    }
    catch(error)
    {
@@ -44,6 +44,10 @@ export default function App() {
   return (
     <div>
       
+      { isLoading && <h1>Loading...</h1> }
+      { error && <h1>{ error.message }</h1> }
+      { countries && <Countries countries={countries}/> }
+
     </div>
   )
 }
