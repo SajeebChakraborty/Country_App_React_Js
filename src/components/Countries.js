@@ -6,7 +6,7 @@ import Country from './Country';
 import style from './countries.module.css';
 
 const Countries = (props) => {
-    
+
   return (
 
     <section className={style.countries}>
@@ -20,6 +20,7 @@ const Countries = (props) => {
         })}
       
     </section>
+    
   )
 }
 
