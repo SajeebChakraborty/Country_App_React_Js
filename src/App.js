@@ -4,6 +4,7 @@ import Countries from './components/Countries';
 
 import "./App.css";
 import Country from './components/Country';
+import Search from './components/Search';
 
 const url="https://restcountries.com/v3.1/all";
 
@@ -59,7 +60,7 @@ export default function App() {
     <div>
 
       <h1>Country App</h1>
-      
+      <Search/>
       { isLoading && <h1>Loading...</h1> }
       { error && <h1>{ error.message }</h1> }
       { countries && <Countries countries={filterCountries} onRemoveCountry={handleRemoveCountry}/> }
