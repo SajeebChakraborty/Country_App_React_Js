@@ -1,0 +1,17 @@
+.countries{
+
+    padding: 3rem;
+    display: grid;
+    gap: 2rem;
+
+}
+
+@media screen and (min-width: 768px) {
+    
+    .countries{
+
+        grid-template-columns: auto auto;
+
+    }
+
+}
