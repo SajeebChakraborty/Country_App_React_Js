@@ -66,7 +66,6 @@ export default function App() {
       return countryName.startsWith(value);
 
     })
-
     setFilterCounries(newCountries);
 
   }
