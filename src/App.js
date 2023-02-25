@@ -58,7 +58,12 @@ export default function App() {
 
   const handleSearch = (searchValue)=>{
 
-    
+    let value=searchValue.toLowerCase();
+    const newCountries = countries.filter((country)=> {
+
+      const countryName = country.name.common;
+
+    })
 
   }
 

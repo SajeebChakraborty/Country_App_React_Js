@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react'
 
-const Search = () => {
+const Search = (props) => {
 
   const [searchText,setSearchText] = useState("");
 
   const handleChange = (e) => {
 
     setSearchText(e.target.value);
-    alert(searchText);
 
   }
 
   useEffect(()=>{
 
-
+    props.onSearch(searchText);
 
   },[searchText])
 
