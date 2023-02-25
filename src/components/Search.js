@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 const Search = (props) => {
 
   const [searchText,setSearchText] = useState("");
+  
   const handleChange = (e) => {
 
     setSearchText(e.target.value);
