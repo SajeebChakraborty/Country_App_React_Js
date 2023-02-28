@@ -12,7 +12,7 @@ const Search = (props) => {
   useEffect(()=>{
 
     props.onSearch(searchText);
-    
+  
   },[searchText])
 
   return (
